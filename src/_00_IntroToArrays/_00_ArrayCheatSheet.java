@@ -31,15 +31,20 @@ System.out.println(fruit[fruit.length-3]);
 		}
 		
 		//7. make an array of 50 integers
-		for (int i = 0; i < 51; i++) {
-			ArrayList<Integer> numbers = new ArrayList<Integer>();
+		int [] numbers=new int[49];
 		
 		//8. use a for loop to make every value of the integer array a random number
-		new Random(i).nextInt();
+		for (int i = 0; i < numbers.length; i++) {
+			numbers[i]=Random().nextInt();
 		}
+		
 		//9. without printing the entire array, print only the smallest number on the array
-
+		
 		//10 print the entire array to see if step 8 was correct
+		for(int i = 0; i < numbers.size(); i++){
+			System.out.println(numbers[i]);
+		}
+		}
 
 		//11. print the largest number in the array.
 		
