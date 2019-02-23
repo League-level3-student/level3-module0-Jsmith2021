@@ -27,36 +27,14 @@ robot[4].moveTo(450, 550);
 	    //   a random amount less than 50.
    
 		//6. use a while loop to repeat step 5 until a robot has reached the top of the screen.
-//boolean finished=false;
-//while(!finished) {
- //	for (int i = 0; i < robot.length; i++) {
-//		Random random = new Random();
-	//	random.nextInt(50);
-	//	robot[i].move(i);
-	
- //	if(robot[i].getY()==0) {
- //		finished=true;
- //		robot[i].sparkle();
- 		//System.out.println("You are the winner!");
- //		
- //	}
-// 	}
-//}
-		//7. declare that robot the winner and throw it a party!
-    	
-		//8. try different races with different amounts of robots.
-    	
-	    //9. make the robots race around a circular track.
-boolean finished2=false;
-while(!finished2) {
+boolean finished=false;
+while(!finished) {
  	for (int i = 0; i < robot.length; i++) {
-		Random random = new Random();
+	Random random = new Random();
 		random.nextInt(50);
-		robot[1].move(i);
-		robot[i].turn(5);
-	
- 	if(robot[i].getY()==300) {
- 		finished2=true;
+		robot[i].move(i);
+		if(robot[i].getY()==0) {
+ 		finished=true;
  		robot[i].sparkle();
  		System.out.println("You are the winner!");
  		
@@ -65,3 +43,9 @@ while(!finished2) {
 }
 	}
 }
+		//7. declare that robot the winner and throw it a party!
+    	
+		//8. try different races with different amounts of robots.
+    	
+	    //9. make the robots race around a circular track.
+
