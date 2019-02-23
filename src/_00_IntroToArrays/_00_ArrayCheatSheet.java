@@ -6,6 +6,7 @@ import java.util.Random;
 
 
 public class _00_ArrayCheatSheet {
+
 	public static void main(String[] args) {
 		//1. make an array of 5 Strings
 String[] fruit = new String[5];
@@ -30,25 +31,37 @@ System.out.println(fruit[fruit.length-3]);
 			System.out.println(fruit[i]);
 		}
 		
+		
 		//7. make an array of 50 integers
 		int [] numbers=new int[49];
 		
 		//8. use a for loop to make every value of the integer array a random number
 		for (int i = 0; i < numbers.length; i++) {
-			numbers[i]=Random().nextInt();
+			numbers[i]=new Random().nextInt();
 		}
 		
 		//9. without printing the entire array, print only the smallest number on the array
+		int lowestnumber=numbers[0];
+		int highestnumber=numbers[0];
+		for (int i = 1; i < numbers.length; i++) {
+		if (numbers[i] > highestnumber){
 		
-		//10 print the entire array to see if step 8 was correct
-		for(int i = 0; i < numbers.size(); i++){
-			System.out.println(numbers[i]);
+			highestnumber = numbers[i];
 		}
+		if (numbers[i] < lowestnumber){
+			lowestnumber = numbers[i];
+		}
+		}
+		//10 print the entire array to see if step 8 was correct
+		for (int i = 0; i < numbers.length; i++) {
+			System.out.println(numbers[i]);
 		}
 
 		//11. print the largest number in the array.
 		
 		//12. print only the last element in the array
+		System.out.println(numbers[numbers.length-49]);
 		
 	}
 }
+
