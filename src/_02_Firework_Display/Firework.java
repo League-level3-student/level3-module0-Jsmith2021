@@ -10,16 +10,22 @@ import java.util.Random;
  *
  */
 
+
 public class Firework{
 	public static final int GRAVITY = 1;
 	
 	//1. Create an array of Spark objects called sparks. Don't initialize it.
-	
+	Spark []spark;
 	public boolean dead = false;
 	
 	public Firework() {
 		//2. Initialize the Spark array to contain 100 Sparks. 
-
+for (int i = 0; i < spark.length; i++) {
+	Spark []spark=new Spark[100];
+	spark[i].y=50;
+	spark[i].x=500;
+	
+}
 		
 		//3. Iterate through the sparks and initialize each one to a new Spark.
 		//   Make each spark start at the middle bottom of the screen.
@@ -29,7 +35,10 @@ public class Firework{
 	public void launch() {
 		//4. Iterate through the sparks and reset their x and y location
 		//   to their original starting point.
-		
+		for (int i = 0; i < spark.length; i++) {
+			spark[i].y=50;
+			spark[i].x=500;
+		}
 	}
 	
 	public void updateSparks() {

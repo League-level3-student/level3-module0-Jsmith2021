@@ -24,14 +24,13 @@ void draw() {
   //6. set the background color with background(r, g, b);
 background(0,125,255);
 
+
   //7. set the color for your graph
 
 
   //8. draw a rectangle for each int in your array.
    for (int i = 0; i < number.length; i++) {
-    number[i]=height;
-    rect(i, height, 1, -height);
-  fill(255);
+    rect(i, height, 1, -number[i]);
   }
   
   //   the x value will be the index of the int
@@ -53,7 +52,8 @@ background(0,125,255);
   //11. call the method you made in step 10 when the mouse is pressed
   
   if(mousePressed==true){
-    randomize();}
+    randomize();
+  }
   }
 
 void stepSort(int[] arr) {
